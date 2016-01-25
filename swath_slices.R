@@ -1,4 +1,4 @@
-##	Thresholds for N and S transect:
+##	Thresholds for N and S transect boundaries:
 ##		332140 N
 ##		330460 S
 ##
@@ -17,7 +17,7 @@ data(meuse.grid)
 slice_width <- 500
 
 
-##	Calculate angle of line for Northern Hu point:
+##	Calculate angle of line for transects:
 x1 <- 181000
 y1 <- 331500
 
@@ -29,8 +29,8 @@ dy <- y2 - y1
 
 angle <- atan(dx/dy)
 
-##	Now, find the endpoints of the line, with that angle passing through our 
-##		Hu line but ending with the N and S transect y values:
+##	Now, find the endpoints of the transects, with that angle passing through our 
+##		original line but ending with the N and S transect boundary y values:
 new_y <- 332140
 dy <- new_y - y2
 dx <- tan(angle) * dy
